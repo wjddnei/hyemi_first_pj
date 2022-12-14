@@ -1,0 +1,497 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+.inner{
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+
+.back-to-position{
+    opacity: 0;
+    transition-duration: 1s;
+}
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+.back-to-position.to-right{
+    transform: translateX(-150px);
+}
+.back-to-position.to-top{
+    transform: translateY(-150px);
+}
+.show .back-to-position{
+    opacity: 1;
+    transform: translateX(0);
+}
+.show .back-to-position.delay-1{
+    transition-delay: .3s;
+}
+.show .back-to-position.delay-2{
+    transition-delay: .6s;
+}
+
+header{
+    background-color: #fff;
+    top: 0;
+    /* z-index: 9; */
+}
+header .inner {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    z-index: 9;
+}
+header .left .left-item{
+    height: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+header .left .left-item a .material-icons{ 
+    font-size: 50px;
+    margin-left: 20px;
+}
+header .center .center-item{
+    /* background-color: aqua; */
+    height: 75px;
+    position: absolute;
+    right: 40%;
+    left: 40%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+header .center .center-item a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header .right .right-item{
+    height: 75px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+header .right .right-item a .material-icons{ 
+    font-size: 50px;
+    margin-right: 20px;
+}
+.top .top-menu{
+    width: 100%;
+    height: 50px;
+    padding-top: 150px;
+}
+.top .top-menu .top-menu-list{
+    display: flex;
+    justify-content: center;
+}
+.top .top-menu .top-menu-list li{
+    padding-left: 40px;
+    font-size: 12px;
+}
+.top .top-menu .top-menu-list li:first-child{
+    padding-left: 0;
+}
+
+.main{
+    width: 100%;
+    padding-top: 30px;
+}
+.main .main-shop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 20px;
+}
+.main .main-shop .shop-1{
+    position: relative;
+    transition: 0.5s;
+}
+.main .main-shop .shop-1 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.main .main-shop .shop-1 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.main .main-shop .shop-1:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.main .main-shop .shop-1 p{
+    margin: 5px 0;
+}
+
+.main .main-shop .shop-2{
+    position: relative;
+    transition: 0.5s;
+}
+.main .main-shop .shop-2 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.main .main-shop .shop-2 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.main .main-shop .shop-2:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.main .main-shop .shop-2 p{
+    margin: 5px 0;
+}
+
+.main .main-shop .shop-3{
+    position: relative;
+    transition: 0.5s;
+}
+.main .main-shop .shop-3 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.main .main-shop .shop-3 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 405px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.main .main-shop .shop-3:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.main .main-shop .shop-3 p{
+    margin: 5px 0;
+}
+
+.main .main-shop .shop-4{
+    position: relative;
+    transition: 0.5s;
+}
+.main .main-shop .shop-4 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.main .main-shop .shop-4 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 405px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.main .main-shop .shop-4:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.main .main-shop .shop-4 p{
+    margin: 5px 0;
+}
+
+.promotion {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    overflow: hidden;
+
+    position: relative;
+    height: 100%;
+    padding-top: 100px;
+
+    transition: height .4s;
+}
+.promotion.hide {
+    height: 0;
+}
+
+.promotion .swiper {
+    /* 이미지 크기(819px) 슬라이드 3개 && 사이 여백 10px 2개 = 2477px */
+    width: calc(1070px * 3 + 10px * 2);
+    height: 100%;
+    /* 2477px 유지를 위해 감소 너비 비율을 0으로 */
+    flex-shrink: 0;
+}
+.promotion .swiper-slide {
+    /* 모든 슬라이드를 반투명하게, active 한 것만 불투명하게 */
+    position: relative;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+.promotion .swiper-slide-active {
+    opacity: 1;
+}
+
+.banner-1{
+    background-image: url("../image/lmc_bg.jpg");
+}
+.banner-1 .inner{
+    margin-top: 50px;
+    height: 500px;
+    /* background-color: #cfcfcf; */
+}
+.banner-1 .inner .logo_image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+}
+.banner-1 .inner .text-group .text_1{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 25%;
+    left: 25%;
+}
+.banner-1 .inner .text-group .text_2{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    
+}
+
+.sub{
+    width: 100%;
+    padding-top: 80px;
+    position: relative;
+    padding-bottom: 150px;
+}
+.sub .sub-shop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 20px;
+}
+.sub .sub-shop .shop-1{
+    position: relative;
+    transition: 0.5s;
+}
+.sub .sub-shop .shop-1 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.sub .sub-shop .shop-1 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.sub .sub-shop .shop-1:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.sub .sub-shop .shop-1 p{
+    margin: 5px 0;
+}
+
+.sub .sub-shop .shop-2{
+    position: relative;
+    transition: 0.5s;
+}
+.sub .sub-shop .shop-2 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.sub .sub-shop .shop-2 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.sub .sub-shop .shop-2:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.sub .sub-shop .shop-2 p{
+    margin: 5px 0;
+}
+
+.sub .sub-shop .shop-3{
+    position: relative;
+    transition: 0.5s;
+}
+.sub .sub-shop .shop-3 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.sub .sub-shop .shop-3 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 405px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.sub .sub-shop .shop-3:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.sub .sub-shop .shop-3 p{
+    margin: 5px 0;
+}
+
+.sub .sub-shop .shop-4{
+    position: relative;
+    transition: 0.5s;
+}
+.sub .sub-shop .shop-4 .img-1{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 5px 5px;
+
+}
+.sub .sub-shop .shop-4 .img-2{
+    /* display: none; */
+    /* padding: 20px 20px; */
+    width: 400px;
+    height: 405px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.sub .sub-shop .shop-4:hover .img-2{
+    /* display: block; */
+    opacity: 1;
+}
+.sub .sub-shop .shop-4 p{
+    margin: 5px 0;
+}
+
+.youtube{
+    position: relative;
+    height: 800px;
+    background-color: #000;
+    overflow: hidden;
+}
+.youtube .yutube__area{
+    --width : 1920px;
+    --height : 1080px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: var(--width);
+    height: var(--height);  
+
+    margin-left: calc(var(--width) / -2);
+    margin-top: calc(var(--height) / -2);
+}
+#player{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.youtube .youtube__cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* LIST */
+header .list{
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: aqua;
+}
+header .list .shop__list{
+    padding: 10px 30px;
+}
+header .list .shop__list li{
+    padding-left: 30px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+header .list .shop__list h2{
+    font-size: 16px;
+    font-weight: 700;
+}
