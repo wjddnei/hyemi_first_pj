@@ -1,20 +1,21 @@
+body{
+    font-size: 12px;
+}
 a {
     text-decoration: none;
     color: #000;
 }
-.inner{
-    width: 1400px;
-    margin: 0 auto;
-    position: relative;
-}
-
 .red{
     color: red;
 }
 .blue{
     color: blue;
 }
-
+.inner{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
 .back-to-position{
     opacity: 0;
     transition-duration: 1s;
@@ -39,81 +40,61 @@ a {
     transition-delay: .6s;
 }
 
+/* 상단 고정 바 */
 header{
-    background-color: #fff;
-    top: 0;
-    /* z-index: 9; */
+    width: 100%;
 }
 header .inner {
     width: 100%;
-    height: 120px;
+    height: 80px;
+
+    /* border 나중에 삭제 */
+    /* border-bottom: 1px solid black; */
+
     position: fixed;
-    z-index: 9;
-}
-header .left .left-item{
-    height: 75px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 header .left .left-item a .material-icons{ 
-    font-size: 50px;
-    margin-left: 20px;
-}
-header .center .center-item{
-    /* background-color: aqua; */
-    height: 75px;
-    position: absolute;
-    right: 40%;
-    left: 40%;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 30px;
 }
 header .center .center-item a img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-header .right .right-item{
-    height: 75px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    width: 100px;
 }
 header .right .right-item a .material-icons{ 
-    font-size: 50px;
+    font-size: 30px;
+    font-weight: 900;
     margin-right: 20px;
 }
-.top .top-menu{
+
+/* 상단 메뉴바 */
+.top{
     width: 100%;
-    height: 50px;
-    padding-top: 150px;
 }
-.top .top-menu .top-menu-list{
+.top .inner .top-menu-list{
     display: flex;
+    height: 110px;
     justify-content: center;
+    align-items: flex-end;
 }
-.top .top-menu .top-menu-list li{
-    padding-left: 40px;
-    font-size: 12px;
+.top .inner .top-menu-list li::before{
+    content: "";
+    margin-left: 25px;
 }
-.top .top-menu .top-menu-list li:first-child{
-    padding-left: 0;
+.top .inner .top-menu-list li:first-child::before{
+    display: none;
 }
 
-.main{
-    width: 100%;
-    padding-top: 30px;
-}
+/* 메인 상품 */
 .main .main-shop{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 20px;
+    padding: 50px 20px;
 }
 .main .main-shop .shop-1{
     position: relative;
@@ -123,27 +104,25 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
+    padding: 10px 10px;
 
 }
 .main .main-shop .shop-1 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    padding: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
 .main .main-shop .shop-1:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .main .main-shop .shop-1 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
 .main .main-shop .shop-2{
@@ -154,27 +133,25 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
+    padding: 10px 10px;
 
 }
 .main .main-shop .shop-2 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    margin: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
 .main .main-shop .shop-2:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .main .main-shop .shop-2 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
 .main .main-shop .shop-3{
@@ -185,27 +162,25 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
+    margin: 10px 10px;
 
 }
 .main .main-shop .shop-3 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
-    height: 405px;
+    height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    margin: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
 .main .main-shop .shop-3:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .main .main-shop .shop-3 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
 .main .main-shop .shop-4{
@@ -216,54 +191,52 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
+    margin: 10px 10px;
 
 }
 .main .main-shop .shop-4 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
-    height: 405px;
+    height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    margin: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
 .main .main-shop .shop-4:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .main .main-shop .shop-4 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
+/* 슬라이드 사진 */
 .promotion {
     display: flex;
     justify-content: center;
-    background-color: #fff;
     overflow: hidden;
-
     position: relative;
-    height: 100%;
     padding-top: 100px;
+    z-index: 0;
 
     transition: height .4s;
+}
+.promotion .swiper img{
+    object-fit: cover;
+    height: 1000px;
 }
 .promotion.hide {
     height: 0;
 }
 
 .promotion .swiper {
-    /* 이미지 크기(819px) 슬라이드 3개 && 사이 여백 10px 2개 = 2477px */
-    width: calc(1070px * 3 + 10px * 2);
-    height: 100%;
-    /* 2477px 유지를 위해 감소 너비 비율을 0으로 */
+    width: calc(656px * 3 + 10px * 2);
+    height: 1000px;
     flex-shrink: 0;
 }
 .promotion .swiper-slide {
-    /* 모든 슬라이드를 반투명하게, active 한 것만 불투명하게 */
     position: relative;
     opacity: 0.5;
     transition: opacity 1s;
@@ -272,49 +245,33 @@ header .right .right-item a .material-icons{
     opacity: 1;
 }
 
+/* 움직이는 배너 */
 .banner-1{
     background-image: url("../image/lmc_bg.jpg");
 }
 .banner-1 .inner{
-    margin-top: 50px;
-    height: 500px;
-    /* background-color: #cfcfcf; */
+    display: flex;
+    justify-content: space-around;
 }
 .banner-1 .inner .logo_image{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    left: 0;
+
 }
-.banner-1 .inner .text-group .text_1{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 25%;
-    left: 25%;
+.banner-1 .inner .text_1{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+
 }
-.banner-1 .inner .text-group .text_2{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 0;
+.banner-1 .inner .text_2{
     
 }
 
-.sub{
-    width: 100%;
-    padding-top: 80px;
-    position: relative;
-    padding-bottom: 150px;
-}
+/* 서브 상품 */
 .sub .sub-shop{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 20px;
+    padding: 50px 20px;
 }
 .sub .sub-shop .shop-1{
     position: relative;
@@ -324,27 +281,25 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
+    padding: 10px 10px;
 
 }
 .sub .sub-shop .shop-1 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    padding: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
 .sub .sub-shop .shop-1:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .sub .sub-shop .shop-1 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
 .sub .sub-shop .shop-2{
@@ -355,18 +310,17 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
+    padding: 10px 10px;
 
 }
 .sub .sub-shop .shop-2 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    margin: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
@@ -375,7 +329,7 @@ header .right .right-item a .material-icons{
     opacity: 1;
 }
 .sub .sub-shop .shop-2 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
 .sub .sub-shop .shop-3{
@@ -386,18 +340,16 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
-
+    margin: 10px 10px;
 }
 .sub .sub-shop .shop-3 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
-    height: 405px;
+    height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    margin: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
@@ -406,7 +358,7 @@ header .right .right-item a .material-icons{
     opacity: 1;
 }
 .sub .sub-shop .shop-3 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
 .sub .sub-shop .shop-4{
@@ -417,29 +369,28 @@ header .right .right-item a .material-icons{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
+    margin: 10px 10px;
 
 }
 .sub .sub-shop .shop-4 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
-    height: 405px;
+    height: 400px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    margin: 10px 10px;
     opacity: 0;
     transition: opacity .2s linear;
 }
 .sub .sub-shop .shop-4:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .sub .sub-shop .shop-4 p{
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
+/* 유튜브 영상 */
 .youtube{
     position: relative;
     height: 800px;
@@ -475,23 +426,59 @@ header .right .right-item a .material-icons{
     height: 100%;
 }
 
-/* LIST */
+/* 좌측 상단 클릭 LIST */
 header .list{
-    position: absolute;
-    top: 0;
-    width: 300px;
-    height: 100%;
+    width: 400px;
+    height: 2000px;
+    overflow: hidden;
+
+    /* 나중에 삭제 */
+    /* background-color: #fff; */
     background-color: aqua;
 }
 header .list .shop__list{
-    padding: 10px 30px;
+    position: absolute;
+    top: 0;
+    left: 50px;
 }
-header .list .shop__list li{
-    padding-left: 30px;
-    padding-top: 10px;
-    font-size: 12px;
+header .list .shop__list .material-icons{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 30px 0;
 }
 header .list .shop__list h2{
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 5px;
 }
+header .list .shop__list li{
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+header .list .ranking__list{
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+header .list .ranking__list a{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+header .list .ranking__list ul{
+    display: flex;
+}
+header .list .ranking__list ul li{
+    width: 80px;
+    font-size: 10px;
+    text-align: center;
+    margin: 10px;
+}
+header .list .ranking__list ul li img{
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+/* 클릭 이벤트 */
