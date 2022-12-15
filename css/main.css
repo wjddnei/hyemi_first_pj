@@ -1,9 +1,9 @@
-a {
+a {   
     text-decoration: none;
     color: #000;
 }
 .inner{
-    width: 1400px;
+    width: 1600px;
     margin: 0 auto;
     position: relative;
 }
@@ -39,96 +39,73 @@ a {
     transition-delay: .6s;
 }
 
-header{
-    background-color: #fff;
-    top: 0;
-    /* z-index: 9; */
-}
+/* 메인 상단바 */
 header .inner {
+    height: 100px;
     width: 100%;
-    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
-    z-index: 9;
-}
-header .left .left-item{
-    height: 75px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    z-index: 1;
 }
 header .left .left-item a .material-icons{ 
-    font-size: 50px;
-    margin-left: 20px;
-}
-header .center .center-item{
-    /* background-color: aqua; */
-    height: 75px;
-    position: absolute;
-    right: 40%;
-    left: 40%;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 50px;
 }
 header .center .center-item a img{
-    width: 100%;
-    height: 100%;
+    width: 180px;
     object-fit: cover;
 }
-header .right .right-item{
-    height: 75px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
 header .right .right-item a .material-icons{ 
-    font-size: 50px;
-    margin-right: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 50px;
 }
-.top .top-menu{
-    width: 100%;
+
+/* 메인 메뉴바 */
+.top .inner{
     height: 50px;
     padding-top: 150px;
 }
-.top .top-menu .top-menu-list{
+.top .inner .top-menu-list{
     display: flex;
     justify-content: center;
 }
-.top .top-menu .top-menu-list li{
-    padding-left: 40px;
+.top .inner .top-menu-list li{
     font-size: 12px;
 }
-.top .top-menu .top-menu-list li:first-child{
-    padding-left: 0;
+.top .inner .top-menu-list li::before{
+    content: "";
+    padding-left: 20px;
+}
+.top .inner .top-menu-list li:first-child::before{
+    display: none;
 }
 
+/* 메인 상품 */
 .main{
     width: 100%;
-    padding-top: 30px;
+    margin-top: 50px;
 }
 .main .main-shop{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 20px;
 }
 .main .main-shop .shop-1{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
 }
 .main .main-shop .shop-1 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
 
 }
 .main .main-shop .shop-1 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -139,7 +116,6 @@ header .right .right-item a .material-icons{
     transition: opacity .2s linear;
 }
 .main .main-shop .shop-1:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .main .main-shop .shop-1 p{
@@ -481,7 +457,6 @@ header .list{
     top: 0;
     width: 300px;
     height: 100%;
-    background-color: aqua;
 }
 header .list .shop__list{
     padding: 10px 30px;
