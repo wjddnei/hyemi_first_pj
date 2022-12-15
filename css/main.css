@@ -421,21 +421,21 @@ header .right .right-item a .material-icons{
 }
 
 header .left .left-item .list__icon:active + .list{
-    opacity: 1;
-    visibility: visible;
+    display : block;
 }
+
 
 /*  SHOP LIST */
 header .list{
-    visibility: hidden;
-    opacity: 0;
     background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 400px;
     height: 1200px;
+    display: none;
 }
+
 header .list .shop__list{
     margin-top: 20px;
     padding: 10px 30px;
@@ -456,24 +456,27 @@ header .list .shop__list h2{
 
 /* RANKING LIST */
 header .list .ranking__list{
-    padding: 10px 30px;
+    padding: 10px 0px;
 }
 header .list .ranking__list a{
     font-size: 16px;
     font-weight: 700;
+    margin-left: 30px;
 }
 header .list .ranking__list .ranking__list_img{
     display: flex;
 }
 header .list .ranking__list .ranking__list_img li{
-    padding: 2px;
+    margin-left: 20px;
 }
 header .list .ranking__list .ranking__list_img img{
     cursor: pointer;
     width: 80px;
+    padding: 2px 10px;
 }
 header .list .ranking__list .ranking__list_img p{
     font-size: 10px;
+    width: 80px;
     text-align: center;
     cursor: pointer;
 }
