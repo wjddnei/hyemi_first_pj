@@ -420,8 +420,9 @@ header .right .right-item a .material-icons{
     height: 100%;
 }
 
-header .left .left-item .list__icon:hover ~ .list{
+header .left .left-item .list__icon:active + .list{
     opacity: 1;
+    visibility: visible;
 }
 
 /*  SHOP LIST */
