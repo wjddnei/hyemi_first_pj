@@ -98,6 +98,7 @@ header .right .right-item a .material-icons{
     position: relative;
     transition: 0.5s;
     margin: 10px 10px;
+    cursor: pointer;
 }
 .main .main-shop .shop-1 .img-1{
     width: 400px;
@@ -125,17 +126,16 @@ header .right .right-item a .material-icons{
 .main .main-shop .shop-2{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 .main .main-shop .shop-2 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
 
 }
 .main .main-shop .shop-2 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -146,7 +146,6 @@ header .right .right-item a .material-icons{
     transition: opacity .2s linear;
 }
 .main .main-shop .shop-2:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .main .main-shop .shop-2 p{
@@ -156,17 +155,16 @@ header .right .right-item a .material-icons{
 .main .main-shop .shop-3{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 .main .main-shop .shop-3 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
 
 }
 .main .main-shop .shop-3 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 405px;
     object-fit: cover;
@@ -177,7 +175,6 @@ header .right .right-item a .material-icons{
     transition: opacity .2s linear;
 }
 .main .main-shop .shop-3:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .main .main-shop .shop-3 p{
@@ -187,17 +184,15 @@ header .right .right-item a .material-icons{
 .main .main-shop .shop-4{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 .main .main-shop .shop-4 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
-
 }
 .main .main-shop .shop-4 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 405px;
     object-fit: cover;
@@ -215,31 +210,30 @@ header .right .right-item a .material-icons{
     margin: 5px 0;
 }
 
+/* 슬라이드 쇼 */
 .promotion {
+    width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #fff;
     overflow: hidden;
-
     position: relative;
-    height: 100%;
     padding-top: 100px;
-
     transition: height .4s;
+    z-index: 0;
 }
 .promotion.hide {
     height: 0;
 }
-
 .promotion .swiper {
-    /* 이미지 크기(819px) 슬라이드 3개 && 사이 여백 10px 2개 = 2477px */
-    width: calc(1070px * 3 + 10px * 2);
-    height: 100%;
-    /* 2477px 유지를 위해 감소 너비 비율을 0으로 */
+    width: calc(590px * 3 + 10px * 2);
+    height: 800px;
     flex-shrink: 0;
 }
+.promotion .swiper-slide img{
+    width: 600px;
+    object-fit: cover;
+}
 .promotion .swiper-slide {
-    /* 모든 슬라이드를 반투명하게, active 한 것만 불투명하게 */
     position: relative;
     opacity: 0.5;
     transition: opacity 1s;
@@ -248,64 +242,44 @@ header .right .right-item a .material-icons{
     opacity: 1;
 }
 
+/* 움직이는 배너 */
 .banner-1{
     background-image: url("../image/lmc_bg.jpg");
 }
 .banner-1 .inner{
     margin-top: 50px;
     height: 500px;
-    /* background-color: #cfcfcf; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.banner-1 .inner .logo_image{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-}
-.banner-1 .inner .text-group .text_1{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 25%;
-    left: 25%;
-}
-.banner-1 .inner .text-group .text_2{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 0;
-    
+.banner-1 .inner .text_1{
+    height: 200px;
+    object-fit: cover;
 }
 
+/* 서브 상품 */
 .sub{
     width: 100%;
-    padding-top: 80px;
-    position: relative;
-    padding-bottom: 150px;
+    margin-top: 100px;
 }
 .sub .sub-shop{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 20px;
 }
 .sub .sub-shop .shop-1{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 .sub .sub-shop .shop-1 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
-
 }
 .sub .sub-shop .shop-1 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -316,7 +290,6 @@ header .right .right-item a .material-icons{
     transition: opacity .2s linear;
 }
 .sub .sub-shop .shop-1:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .sub .sub-shop .shop-1 p{
@@ -326,17 +299,16 @@ header .right .right-item a .material-icons{
 .sub .sub-shop .shop-2{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
+    cursor: pointer;
+
 }
 .sub .sub-shop .shop-2 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
-
 }
 .sub .sub-shop .shop-2 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -347,7 +319,6 @@ header .right .right-item a .material-icons{
     transition: opacity .2s linear;
 }
 .sub .sub-shop .shop-2:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .sub .sub-shop .shop-2 p{
@@ -357,17 +328,16 @@ header .right .right-item a .material-icons{
 .sub .sub-shop .shop-3{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 .sub .sub-shop .shop-3 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
 
 }
 .sub .sub-shop .shop-3 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 405px;
     object-fit: cover;
@@ -378,7 +348,6 @@ header .right .right-item a .material-icons{
     transition: opacity .2s linear;
 }
 .sub .sub-shop .shop-3:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .sub .sub-shop .shop-3 p{
@@ -388,17 +357,16 @@ header .right .right-item a .material-icons{
 .sub .sub-shop .shop-4{
     position: relative;
     transition: 0.5s;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 .sub .sub-shop .shop-4 .img-1{
     width: 400px;
     height: 400px;
     object-fit: cover;
-    padding: 5px 5px;
 
 }
 .sub .sub-shop .shop-4 .img-2{
-    /* display: none; */
-    /* padding: 20px 20px; */
     width: 400px;
     height: 405px;
     object-fit: cover;
@@ -409,14 +377,15 @@ header .right .right-item a .material-icons{
     transition: opacity .2s linear;
 }
 .sub .sub-shop .shop-4:hover .img-2{
-    /* display: block; */
     opacity: 1;
 }
 .sub .sub-shop .shop-4 p{
     margin: 5px 0;
 }
 
+/* 유튜브 영상 */
 .youtube{
+    margin-top: 250px;
     position: relative;
     height: 800px;
     background-color: #000;
@@ -451,22 +420,59 @@ header .right .right-item a .material-icons{
     height: 100%;
 }
 
-/* LIST */
+header .left .left-item .list__icon:hover ~ .list{
+    opacity: 1;
+}
+
+/*  SHOP LIST */
 header .list{
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
     position: absolute;
     top: 0;
+    left: 0;
     width: 300px;
-    height: 100%;
+    height: 1200px;
 }
 header .list .shop__list{
+    margin-top: 20px;
     padding: 10px 30px;
 }
 header .list .shop__list li{
-    padding-left: 30px;
+    margin-left: 70px;
     padding-top: 10px;
     font-size: 12px;
+}
+header .list .shop__list a{
+    margin-left: -55px;
 }
 header .list .shop__list h2{
     font-size: 16px;
     font-weight: 700;
+    margin-top: 10px;
+}
+
+/* RANKING LIST */
+header .list .ranking__list{
+    padding: 10px 30px;
+}
+header .list .ranking__list a{
+    font-size: 16px;
+    font-weight: 700;
+}
+header .list .ranking__list .ranking__list_img{
+    display: flex;
+}
+header .list .ranking__list .ranking__list_img li{
+    padding: 2px;
+}
+header .list .ranking__list .ranking__list_img img{
+    cursor: pointer;
+    width: 80px;
+}
+header .list .ranking__list .ranking__list_img p{
+    font-size: 10px;
+    text-align: center;
+    cursor: pointer;
 }
