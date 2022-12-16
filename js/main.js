@@ -19,3 +19,24 @@ spyEls.forEach(function(spyEl){
   .setClassToggle(spyEl, 'show')
   .addTo(new ScrollMagic.Controller());
 });
+
+function getfocus() {
+  document.getElementById("list__1").focus();
+}
+
+function losefocus() {
+  document.getElementById("list__1").blur();
+}
+
+const listIcon = document.querySelector('.list__icon');
+const listEl = document.querySelector('.list');
+const exitIcon = document.querySelector('.exit__icon');
+
+listIcon.addEventListener('click',function(){
+// toggle은 없으면 넣어주고 있으면 빼준다 add remove 합친거라 생각하면 됨
+listEl.classList.toggle('active');
+});
+exitIcon.addEventListener('click',function(){
+  // toggle은 없으면 넣어주고 있으면 빼준다 add remove 합친거라 생각하면 됨
+  listEl.classList.toggle('active');
+  });

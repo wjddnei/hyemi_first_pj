@@ -420,9 +420,9 @@ header .right .right-item a .material-icons{
     height: 100%;
 }
 
-header .left .left-item .list__icon:active + .list{
+/* header .left .left-item .list__icon:active + .list{
     display : block;
-}
+} */
 
 
 /*  SHOP LIST */
@@ -435,7 +435,9 @@ header .list{
     height: 1200px;
     display: none;
 }
-
+header .list.active{
+    display: block;
+}
 header .list .shop__list{
     margin-top: 20px;
     padding: 10px 30px;
@@ -446,9 +448,13 @@ header .list .shop__list li{
     font-size: 12px;
 }
 header .list .shop__list a{
-    margin-left: -55px;
+    margin-left: -60px;
 }
-header .list .shop__list h2{
+header .list .shop__list .exit__icon{
+    margin-left: -115px;
+}
+header .list .shop__list li h2{
+    margin-left: -70px;
     font-size: 16px;
     font-weight: 700;
     margin-top: 10px;
@@ -458,7 +464,7 @@ header .list .shop__list h2{
 header .list .ranking__list{
     padding: 10px 0px;
 }
-header .list .ranking__list a{
+header .list .ranking__list li a{
     font-size: 16px;
     font-weight: 700;
     margin-left: 30px;
