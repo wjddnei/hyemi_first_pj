@@ -10,24 +10,6 @@ new Swiper('.promotion .swiper', {
     pagination: true
 });
 
-const spyEls = document.querySelectorAll('section.scroll-spy');
-spyEls.forEach(function(spyEl){
-  new ScrollMagic.Scene({
-    triggerElement: spyEl,
-    triggerHook: 0.8
-})
-  .setClassToggle(spyEl, 'show')
-  .addTo(new ScrollMagic.Controller());
-});
-
-function getfocus() {
-  document.getElementById("list__1").focus();
-}
-
-function losefocus() {
-  document.getElementById("list__1").blur();
-}
-
 const listIcon = document.querySelector('.list__icon');
 const listEl = document.querySelector('.list');
 const exitIcon = document.querySelector('.exit__icon');
